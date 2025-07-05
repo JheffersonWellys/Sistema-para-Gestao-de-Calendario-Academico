@@ -1,0 +1,15 @@
+# Pastas temporárias do Visual Studio
+.vs/
+obj/
+bin/
+
+# Arquivos de configuração local e de usuário
+*.user
+*.suo
+
+# Backup automático do Excel
+*.xlk
+
+# Logs e temporários do VS
+*.userosscache
+*.sln.docstates
