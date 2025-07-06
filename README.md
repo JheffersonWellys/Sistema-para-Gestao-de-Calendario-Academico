@@ -1,4 +1,4 @@
-# 📘 GCA - Gerenciador de Controle Acadêmico
+# 📘 GCA - Gestão de Calendário Acadêmico 
 
 [![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)](https://github.com)
 [![VBA](https://img.shields.io/badge/plataforma-Excel%20VBA-blue)](https://learn.microsoft.com/pt-br/office/vba/api/overview/excel)
@@ -92,5 +92,5 @@ Dim rng As Range = ObterIntervalo(PL_MENU, "RNG_MenuPrincipal")
 
 **H4rzel**  
 Desenvolvedor responsável pelo design, lógica e implementação do GCA.  
-📧 *(adicione seu e-mail aqui, se desejar)*
+📧 *jhefferson.w.dev@gmail.com* 
 
