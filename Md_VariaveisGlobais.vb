@@ -112,8 +112,7 @@ Public Module Md_VariaveisGlobais
         {"Bttn_ExportarEm_XLSX", IdentificadoresDeBotoesDaRibbon.ExportarEm_XLSX}
     }
 
-    Public ReadOnly ExecutorDeAcoesDaRibbon As Dictionary(Of IdentificadoresDeBotoesDaRibbon, System.Action) =
-        New Dictionary(Of IdentificadoresDeBotoesDaRibbon, System.Action) From {
+    Public ReadOnly ExecutorDeAcoesDaRibbon As New Dictionary(Of IdentificadoresDeBotoesDaRibbon, System.Action) From {
         {IdentificadoresDeBotoesDaRibbon.IniciarSessao, Sub() NavegarParaTab("Tb_MenuInicial")},
         {IdentificadoresDeBotoesDaRibbon.FinalizarSessao, Sub() NavegarParaTab("Tb_Logon")},
         {IdentificadoresDeBotoesDaRibbon.IrPara_Configuracoes_Administrativas, Sub() NavegarParaTab("Tb_Configuracoes_Administrativas")},
@@ -154,8 +153,7 @@ Public Module Md_VariaveisGlobais
         {IdentificadoresDeBotoesDaRibbon.ExportarEm_XLSX, Sub() EmBreve()}
     }
 
-    Public ReadOnly MapaDeIconesDeBotoesDaRibbon As Dictionary(Of IdentificadoresDeBotoesDaRibbon, Bitmap) =
-        New Dictionary(Of IdentificadoresDeBotoesDaRibbon, Bitmap) From {
+    Public ReadOnly MapaDeIconesDeBotoesDaRibbon As New Dictionary(Of IdentificadoresDeBotoesDaRibbon, Bitmap) From {
         {IdentificadoresDeBotoesDaRibbon.IniciarSessao, My.Resources.icn_IniciarSessao},
         {IdentificadoresDeBotoesDaRibbon.FinalizarSessao, My.Resources.icn_FinalizarSessao},
         {IdentificadoresDeBotoesDaRibbon.IrPara_Configuracoes_Administrativas, My.Resources.icn_ConfiguracoesAdministrativas},
@@ -195,6 +193,55 @@ Public Module Md_VariaveisGlobais
         {IdentificadoresDeBotoesDaRibbon.ExportarEm_PDF, My.Resources.icn_ExportarEmPDF},
         {IdentificadoresDeBotoesDaRibbon.ExportarEm_XLSX, My.Resources.icn_ExportarEmXLSX}
     }
+
+
+    Public ReadOnly RegrasDeHabilitacaoDeBotoesDaRibbon As New Dictionary(Of String, Func(Of Boolean)) From {
+        {"Bttn_IniciarSessao", Function() True},
+        {"Bttn_FinalizarSessao", Function() True},
+        {"Bttn_IrPara_Configuracoes_Administrativas", Function() True},
+        {"Bttn_IrPara_Configuracoes_Infraestrutura", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__TIPOS_DE_UNIDADES_CURRICULARES") > 0},
+        {"Bttn_IrPara_Configuracoes_Academicas", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__SALAS_DE_AULA") > 0},
+        {"Bttn_IrPara_Configuracoes_Educacionais", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DOCENTES") > 0},
+        {"Bttn_IrPara_Configuracoes_Eventos", Function() Not String.IsNullOrEmpty(ObterTexto(PL_CONFIGURACOES, "RNG__CONFIGURACAO__DADOS_TURMA__CODIGO_DA_TURMA"))},
+        {"Bttn_IrPara_Edicao_Cronograma", Function()
+                                              Return VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__FERIADOS") > 0 AndAlso
+                                              VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__RECESSOS") > 0
+                                          End Function},
+        {"Bttn_Configuracoes_Administrativa_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_Configurar_TurnoLetivo", Function() True},
+        {"Bttn_Configurar_HorariosDeAula", Function() Not String.IsNullOrEmpty(ObterTexto(PL_CONFIGURACOES, "RNG__CONFIGURACAO__DADOS_TURMA__TURNO_LETIVO"))},
+        {"Bttn_Configurar_TiposUnidadesCurriculares", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__HORARIOS") > 0},
+        {"Bttn_Configuracoes_Infraestrutura_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_Configurar_Blocos", Function() True},
+        {"Bttn_Configurar_Andares", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS") > 0},
+        {"Bttn_Configurar_SalasDeAula", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES") > 0},
+        {"Bttn_Configuracoes_Academicas_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_Configurar_Docentes", Function() True},
+        {"Bttn_Configurar_AutorizacoesParaLecionar", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DOCENTES") > 0},
+        {"Bttn_Configurar_Atestados", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DOCENTES") > 0},
+        {"Bttn_Configuracoes_Educacionais_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_Configurar_UnidadeEducacional", Function() True},
+        {"Bttn_Configurar_AreaProfissional", Function() Not String.IsNullOrEmpty(ObterTexto(PL_CONFIGURACOES, "RNG__CONFIGURACAO__DADOS_TURMA__UNIDADE_EDUCACIONAL"))},
+        {"Bttn_Configurar_NomeDoCurso", Function() Not String.IsNullOrEmpty(ObterTexto(PL_CONFIGURACOES, "RNG__CONFIGURACAO__DADOS_TURMA__AREA_PROFISSIONAL"))},
+        {"Bttn_Configurar_UnidadesCurriculares", Function() Not String.IsNullOrEmpty(ObterTexto(PL_CONFIGURACOES, "RNG__CONFIGURACAO__DADOS_TURMA__NOME_CURSO"))},
+        {"Bttn_Configurar_CodigoDaTurma", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__UNIDADES_CURRICULARES") > 0},
+        {"Bttn_Configuracoes_Eventos_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_Configurar_Feriados", Function() True},
+        {"Bttn_Configurar_Recessos", Function() VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__FERIADOS") > 0},
+        {"Bttn_Configurar_DatasEventuais", Function()
+                                               Return VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__FERIADOS") > 0 AndAlso
+                                               VerificarQtd(PL_CONFIGURACOES, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__RECESSOS") > 0
+                                           End Function},
+        {"Bttn_Edicao_Cronograma_VoltarPara_MenuInicial", Function() True},
+        {"Bttn_CriarCronograma_ComIa", Function() True},
+        {"Bttn_EditarCronograma_Manualmente", Function() True},
+        {"Bttn_EditarCronograma_ComIa", Function() True},
+        {"Bttn_Visualizar_Erros", Function() True},
+        {"Bttn_Visualizar_CalendarioAcademico", Function() True},
+        {"Bttn_ExportarEm_PDF", Function() True},
+        {"Bttn_ExportarEm_XLSX", Function() True}
+    }
+
 
 #End Region
 

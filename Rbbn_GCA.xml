@@ -16,6 +16,7 @@
 							label="Iniciar Sessão"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -33,6 +34,7 @@
 							label="Finalizar Sessão"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -44,6 +46,7 @@
 							label="Configurações Administrativas"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Grp_Configuracoes_1"/>
@@ -52,6 +55,7 @@
 							label="Configurações de Infraestrutura"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Grp_Configuracoes_2"/>
@@ -60,6 +64,7 @@
 							label="Configurações Acadêmicas"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Grp_Configuracoes_3"/>
@@ -68,6 +73,7 @@
 							label="Configurações Educacionais"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Grp_Configuracoes_4"/>
@@ -76,6 +82,7 @@
 							label="Configurações de Eventos"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>		
 					
 				</group>
@@ -87,6 +94,7 @@
 							label="Edição do Cronograma"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -104,6 +112,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -115,6 +124,7 @@
 							label="Configurar Turno Letivo"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Administrativas_1"/>
@@ -123,6 +133,7 @@
 							label="Configurar Horários de Aula"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Administrativas_2"/>
@@ -131,6 +142,7 @@
 							label="Configurar Tipos de Unidade Curricular"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -148,6 +160,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -159,6 +172,7 @@
 							label="Configurar Blocos"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Intraestrutura_1"/>
@@ -167,6 +181,7 @@
 							label="Configurar Andares"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Intraestrutura_2"/>
@@ -175,6 +190,7 @@
 							label="Configurar Salas de Aula"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -192,6 +208,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -203,6 +220,7 @@
 							label="Configurar Docentes"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Academicas_1"/>
@@ -211,6 +229,7 @@
 							label="Configurar Autorizações para Lecionar"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Academicas_2"/>
@@ -219,6 +238,7 @@
 							label="Configurar Atestados"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -236,6 +256,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -247,6 +268,7 @@
 							label="Configurar Unidade Educacional"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Educacionais_1"/>
@@ -255,6 +277,7 @@
 							label="Configurar Área Profissional"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Educacionais_2"/>
@@ -263,6 +286,7 @@
 							label="Configurar Nome do Curso"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Educacionais_3"/>
@@ -271,6 +295,7 @@
 							label="Configurar Unidades Curriculares"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Educacionais_4"/>
@@ -279,6 +304,7 @@
 							label="Configurar Código da Turma"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -296,6 +322,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -307,6 +334,7 @@
 							label="Configurar Feriados"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Eventos_1"/>
@@ -315,6 +343,7 @@
 							label="Configurar Recessos"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Configuracoes_Eventos_2"/>
@@ -323,6 +352,7 @@
 							label="Configurar Datas Eventuais"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -340,6 +370,7 @@
 							label="Voltar para o Menu Inicial"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -351,6 +382,7 @@
 							label="Criar com IA"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 				</group>
@@ -362,6 +394,7 @@
 							label="Editar Manualmente"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Edicao_Crongrama_1"/>
@@ -371,6 +404,7 @@
 							label="Editar Com IA"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -382,6 +416,7 @@
 							label="Visualizar Erros"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Visualizacao_1"/>
@@ -390,6 +425,7 @@
 							label="Visualizar Calendário Acadêmica"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>
@@ -401,6 +437,7 @@
 							label="Exportar em PDF"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 
 					<separator id="Sprtr_Exportacao_Cronograma_1"/>
@@ -409,6 +446,7 @@
 							label="Exportar em XLSX"
 							size="large"
 							getImage="ObterIconeDoBotao"
+							getEnabled="VerificarHabilitacaoDoBotao"
 							onAction="ExecutarAcaoDaRibbon"/>
 					
 				</group>

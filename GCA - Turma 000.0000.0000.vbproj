@@ -195,6 +195,9 @@
     <Compile Include="ThisWorkbook.vb">
       <DependentUpon>GCA - Turma 000.0000.0000.xlsm</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GCA_PL_CONFIGURACOES.resx">
+      <DependentUpon>GCA_PL_CONFIGURACOES.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

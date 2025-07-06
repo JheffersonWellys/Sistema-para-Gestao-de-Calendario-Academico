@@ -30,7 +30,17 @@ Public Module Md_FuncoesGlobais
     ''' </summary>
     Public Sub EmBreve()
         MessageBox.Show("Em breve...", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        RbbnUI_GCA?.Invalidate()
     End Sub
+
+    Public Function VerificarHabilitacaoDoBotao(control As Office.IRibbonControl) As Boolean
+        If RegrasDeHabilitacaoDeBotoesDaRibbon.ContainsKey(control.Id) Then
+            Return RegrasDeHabilitacaoDeBotoesDaRibbon(control.Id).Invoke()
+        Else
+            Return True
+        End If
+    End Function
+
 
 #End Region
 

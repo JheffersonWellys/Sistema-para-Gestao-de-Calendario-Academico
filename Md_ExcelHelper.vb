@@ -102,6 +102,42 @@ Public Module Md_ExcelHelper
         End Try
     End Function
 
+    ''' <summary>
+    ''' Tenta obter a quantidade numérica de registros de um intervalo nomeado na planilha de configurações.
+    ''' Retorna 0 caso o intervalo não exista, seja nulo ou não contenha valor numérico válido.
+    ''' </summary>
+    ''' <param name="nomeIntervalo">Nome do intervalo definido na planilha de configurações (PL_CONFIGURACOES).</param>
+    ''' <returns>Quantidade numérica como Integer. Retorna 0 se inválido ou não encontrado.</returns>
+
+    Public Function VerificarQtd(nomePlanilha As Excel.Worksheet, nomeIntervalo As String) As Integer
+        Dim rng = ObterIntervalo(nomePlanilha, nomeIntervalo)
+
+        If rng IsNot Nothing AndAlso rng.Value2 IsNot Nothing Then
+            Dim valor As Object = rng.Value2
+            If IsNumeric(valor) Then
+                Return CInt(valor)
+            End If
+        End If
+
+        Return 0
+    End Function
+
+    ''' <summary>
+    ''' Tenta obter o valor textual de um intervalo nomeado na planilha de configurações.
+    ''' Retorna uma string vazia caso o intervalo não exista, seja nulo ou contenha valor nulo.
+    ''' </summary>
+    ''' <param name="nomeIntervalo">Nome do intervalo definido na planilha de configurações (PL_CONFIGURACOES).</param>
+    ''' <returns>Valor do intervalo convertido em string, ou string vazia se inválido ou não encontrado.</returns>
+    Public Function ObterTexto(nomePlanilha As Excel.Worksheet, nomeIntervalo As String) As String
+        Dim rng = ObterIntervalo(nomePlanilha, nomeIntervalo)
+
+        If rng IsNot Nothing AndAlso rng.Value2 IsNot Nothing Then
+            Return CStr(rng.Value2).Trim()
+        End If
+
+        Return String.Empty
+    End Function
+
 #End Region
 
 #Region "Funções para Manipulação de Dados"

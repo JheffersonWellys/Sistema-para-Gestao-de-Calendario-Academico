@@ -97,6 +97,10 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
     
     Friend WithEvents RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES As Microsoft.Office.Tools.Excel.NamedRange
     
+    Friend WithEvents RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS As Microsoft.Office.Tools.Excel.NamedRange
+    
+    Friend WithEvents RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES As Microsoft.Office.Tools.Excel.NamedRange
+    
     '''
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
@@ -229,6 +233,8 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES.BeginInit
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA.BeginInit
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES.BeginInit
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS.BeginInit
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES.BeginInit
     End Sub
     
     '''
@@ -236,6 +242,8 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
     Private Sub EndInitialization()
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES.EndInit
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS.EndInit
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES.EndInit
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA.EndInit
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES.EndInit
@@ -322,6 +330,8 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES = Globals.Factory.CreateNamedRange(Nothing, Nothing, "RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES", "RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES", Me)
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA = Globals.Factory.CreateNamedRange(Nothing, Nothing, "RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA", "RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA", Me)
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES = Globals.Factory.CreateNamedRange(Nothing, Nothing, "RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES", "RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES", Me)
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS = Globals.Factory.CreateNamedRange(Nothing, Nothing, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS", "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS", Me)
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES = Globals.Factory.CreateNamedRange(Nothing, Nothing, "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES", "RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES", Me)
     End Sub
     
     '''
@@ -329,6 +339,173 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
     Private Sub InitializeComponents()
+        '
+        'TB__UNIDADES_CURRICULARES
+        '
+        Me.TB__UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__TIPOS_DE_UNIDADES_CURRICULARES
+        '
+        Me.TB__TIPOS_DE_UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__DOCENTES
+        '
+        Me.TB__DOCENTES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__SALAS_DE_AULA
+        '
+        Me.TB__SALAS_DE_AULA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__AUTORIZACOES_PARA_LECIONAR
+        '
+        Me.TB__AUTORIZACOES_PARA_LECIONAR.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__ATESTADOS
+        '
+        Me.TB__ATESTADOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__FERIADOS
+        '
+        Me.TB__FERIADOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__RECESSOS
+        '
+        Me.TB__RECESSOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__DATAS_EVENTUAIS
+        '
+        Me.TB__DATAS_EVENTUAIS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__PROJETOS_INTEGRADORES
+        '
+        Me.TB__PROJETOS_INTEGRADORES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__ESTAGIOS
+        '
+        Me.TB__ESTAGIOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__HORARIOS
+        '
+        Me.TB__HORARIOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__BLOCOS
+        '
+        Me.TB__BLOCOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'TB__ANDARES
+        '
+        Me.TB__ANDARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__ANO
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__ANO.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__AREA_PROFISSIONAL
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__AREA_PROFISSIONAL.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__CODIGO_DA_TURMA
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__CODIGO_DA_TURMA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__NOME_CURSO
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__NOME_CURSO.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__TURNO_LETIVO
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__TURNO_LETIVO.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__UNIDADE_EDUCACIONAL
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__UNIDADE_EDUCACIONAL.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__DADOS_TURMA__VERSAO
+        '
+        Me.RNG__CONFIGURACAO__DADOS_TURMA__VERSAO.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__LISTA__DOCENTES
+        '
+        Me.RNG__CONFIGURACAO__LISTA__DOCENTES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__LISTA__SALAS_DE_AULA
+        '
+        Me.RNG__CONFIGURACAO__LISTA__SALAS_DE_AULA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__LISTA__UNIDADES_CURRICULARES
+        '
+        Me.RNG__CONFIGURACAO__LISTA__UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ATESTADOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ATESTADOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__AUTORIZACOES_PARA_LECIONAR
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__AUTORIZACOES_PARA_LECIONAR.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DATAS_EVENTUAIS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DATAS_EVENTUAIS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DOCENTES
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__DOCENTES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ESTAGIOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ESTAGIOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__FERIADOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__FERIADOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__HORARIOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__HORARIOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__PROJETOS_INTEGRADORES
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__PROJETOS_INTEGRADORES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__RECESSOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__RECESSOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__SALAS_DE_AULA
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__SALAS_DE_AULA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__TIPOS_DE_UNIDADES_CURRICULARES
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__TIPOS_DE_UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__UNIDADES_CURRICULARES
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES
+        '
+        Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA
+        '
+        Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES
+        '
+        Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES
+        '
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES.DefaultDataSourceUpdateMode = System.Windows.Forms.DataSourceUpdateMode.Never
+        '
+        'GCA_PL_CONFIGURACOES
+        '
     End Sub
     
     '''
@@ -343,6 +520,8 @@ Partial Public NotInheritable Class GCA_PL_CONFIGURACOES
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "17.0.0.0"),  _
      Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Never)>  _
     Protected Overrides Sub OnShutdown()
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__ANDARES.Dispose
+        Me.RNG__CONFIGURACAO__QUANTIDADES_REGISTROS__BLOCOS.Dispose
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__UNIDADES_CURRICULARES.Dispose
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__SALAS_DE_AULA.Dispose
         Me.RNG__TB__CONFIGURACAO__DADOS_LISTA__DOCENTES.Dispose

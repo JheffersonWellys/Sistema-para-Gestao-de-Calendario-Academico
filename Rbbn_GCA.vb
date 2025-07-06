@@ -92,6 +92,21 @@ Public Class Rbbn_GCA
         Return My.Resources.icn_IconePadrao
     End Function
 
+    ''' <summary>
+    ''' Verifica se o botão da Ribbon deve estar habilitado ou desabilitado.
+    ''' Esta função é chamada pelo Excel para determinar a habilitação do botão com base no estado do sistema.
+    ''' Se as configurações do sistema estiverem completas, o botão será habilitado; caso contrário, será desabilitado.
+    ''' </summary>
+    ''' <param name="control"></param>
+    ''' <returns></returns>
+    Public Function VerificarHabilitacaoDoBotao(control As Office.IRibbonControl) As Boolean
+        If RegrasDeHabilitacaoDeBotoesDaRibbon.ContainsKey(control.Id) Then
+            Return RegrasDeHabilitacaoDeBotoesDaRibbon(control.Id).Invoke()
+        Else
+            Return True
+        End If
+    End Function
+
 #End Region
 
 #Region "Auxiliares"
