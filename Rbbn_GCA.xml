@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	
+	<ribbon startFromScratch="true">
+		
+		<tabs>
+
+			<tab id="Tb_Logon"
+				 label="Sistema de Gestão de Calendário Acadêmico"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Logon"
+					   label="Logon">
+
+					<button id="Bttn_IniciarSessao"
+							label="Iniciar Sessão"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+				
+			</tab>
+			
+			<tab id="Tb_MenuInicial"
+				 label="Menu Inicial"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Logout"
+					   label="Logout">
+
+					<button id="Bttn_FinalizarSessao"
+							label="Finalizar Sessão"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+				
+				<group id="Grp_Configuracoes"
+					   label="Configurações do Sistema">
+
+					<button id="Bttn_IrPara_Configuracoes_Administrativas"
+							label="Configurações Administrativas"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Grp_Configuracoes_1"/>
+					
+					<button id="Bttn_IrPara_Configuracoes_Infraestrutura"
+							label="Configurações de Infraestrutura"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Grp_Configuracoes_2"/>
+					
+					<button id="Bttn_IrPara_Configuracoes_Academicas"
+							label="Configurações Acadêmicas"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Grp_Configuracoes_3"/>
+					
+					<button id="Bttn_IrPara_Configuracoes_Educacionais"
+							label="Configurações Educacionais"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Grp_Configuracoes_4"/>
+					
+					<button id="Bttn_IrPara_Configuracoes_Eventos"
+							label="Configurações de Eventos"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>		
+					
+				</group>
+
+				<group id="Grp_Cronograma"
+					   label="Calendário Acadêmico">
+
+					<button id="Bttn_IrPara_Edicao_Cronograma"
+							label="Edição do Cronograma"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+				
+			</tab>
+			
+			<tab id="Tb_Configuracoes_Administrativas"
+				 label="Menu Inicial > Configurações Administrativas"
+				 getVisible="VerificarVisibilidadeDaAba">
+				
+				<group id="Grp_Configuracoes_Administrativas_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+					
+					<button id="Bttn_Configuracoes_Administrativa_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+
+				<group id="Grp_Configuracoes_Administrativas"
+					   label="Configurações Administrativas">
+
+					<button id="Bttn_Configurar_TurnoLetivo"
+							label="Configurar Turno Letivo"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Administrativas_1"/>
+					
+					<button id="Bttn_Configurar_HorariosDeAula"
+							label="Configurar Horários de Aula"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Administrativas_2"/>
+					
+					<button id="Bttn_Configurar_TiposUnidadesCurriculares"
+							label="Configurar Tipos de Unidade Curricular"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+				
+			</tab>
+			
+			<tab id="Tb_Configuracoes_Infraestrutura"
+				 label="Menu Inicial > Configurações de Infraestrutura"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Configuracoes_Infraestrutura_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_Configuracoes_Infraestrutura_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+				<group id="Grp_Configuracoes_Intraestrutura"
+					   label="Configurações de Infraestrutura">
+
+					<button id="Bttn_Configurar_Blocos"
+							label="Configurar Blocos"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Intraestrutura_1"/>
+					
+					<button id="Bttn_Configurar_Andares"
+							label="Configurar Andares"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Intraestrutura_2"/>
+					
+					<button id="Bttn_Configurar_SalasDeAula"
+							label="Configurar Salas de Aula"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+
+			</tab>
+			
+			<tab id="Tb_Configuracoes_Academicas"
+				 label="Menu Inicial > Configurações Acadêmicas"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Configuracoes_Academicas_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_Configuracoes_Academicas_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+				<group id="Grp_Configuracoes_Academicas"
+					   label="Configurações Acadêmicas">
+
+					<button id="Bttn_Configurar_Docentes"
+							label="Configurar Docentes"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Academicas_1"/>
+
+					<button id="Bttn_Configurar_AutorizacoesParaLecionar"
+							label="Configurar Autorizações para Lecionar"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Academicas_2"/>
+
+					<button id="Bttn_Configurar_Atestados"
+							label="Configurar Atestados"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+				
+			</tab>
+			
+			<tab id="Tb_Configuracoes_Educacionais"
+				 label="Menu Inicial > Configurações Educacionais"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Configuracoes_Educacionais_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_Configuracoes_Educacionais_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+				<group id="Grp_Configuracoes_Educacionais"
+					   label="Configurações Educacionais">
+
+					<button id="Bttn_Configurar_UnidadeEducacional"
+							label="Configurar Unidade Educacional"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Educacionais_1"/>
+
+					<button id="Bttn_Configurar_AreaProfissional"
+							label="Configurar Área Profissional"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Educacionais_2"/>
+
+					<button id="Bttn_Configurar_NomeDoCurso"
+							label="Configurar Nome do Curso"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Educacionais_3"/>
+
+					<button id="Bttn_Configurar_UnidadesCurriculares"
+							label="Configurar Unidades Curriculares"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Educacionais_4"/>
+
+					<button id="Bttn_Configurar_CodigoDaTurma"
+							label="Configurar Código da Turma"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+			</tab>
+			
+			<tab id="Tb_Configuracoes_Eventos"
+				 label="Menu Inicial > Configuração de Eventos"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Configuracoes_Eventos_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_Configuracoes_Eventos_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+
+				<group id="Grp_Configuracoes_Eventos"
+					   label="Configurações de Eventos">
+
+					<button id="Bttn_Configurar_Feriados"
+							label="Configurar Feriados"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Eventos_1"/>
+
+					<button id="Bttn_Configurar_Recessos"
+							label="Configurar Recessos"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Configuracoes_Eventos_2"/>
+
+					<button id="Bttn_Configurar_DatasEventuais"
+							label="Configurar Datas Eventuais"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+
+			</tab>
+			
+			<tab id="Tb_Edicao_Cronograma"
+				 label="Menu Inicial > Edição do Cronograma"
+				 getVisible="VerificarVisibilidadeDaAba">
+
+				<group id="Grp_Edicao_Cronograma_VoltarPara_MenuInicial"
+					   label="Menu Inicial">
+
+					<button id="Bttn_Edicao_Cronograma_VoltarPara_MenuInicial"
+							label="Voltar para o Menu Inicial"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+				<group id="Grp_Criacao_Cronograma"
+					   label="Criação">
+
+					<button id="Bttn_CriarCronograma_ComIa"
+							label="Criar com IA"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+				</group>
+
+				<group id="Grp_Edicao_Crongrama"
+					   label="Edição">
+
+					<button id="Bttn_EditarCronograma_Manualmente"
+							label="Editar Manualmente"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Edicao_Crongrama_1"/>
+
+					
+					<button id="Bttn_EditarCronograma_ComIa"
+							label="Editar Com IA"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+				
+				<group id="Grp_Visualizacao"
+					   label="Visualização">
+
+					<button id="Bttn_Visualizar_Erros"
+							label="Visualizar Erros"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Visualizacao_1"/>
+					
+					<button id="Bttn_Visualizar_CalendarioAcademico"
+							label="Visualizar Calendário Acadêmica"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+				
+				<group id="Grp_Exportacao_Cronograma"
+					   label="Exportação">
+
+					<button id="Bttn_ExportarEm_PDF"
+							label="Exportar em PDF"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+
+					<separator id="Sprtr_Exportacao_Cronograma_1"/>
+					
+					<button id="Bttn_ExportarEm_XLSX"
+							label="Exportar em XLSX"
+							size="large"
+							getImage="ObterIconeDoBotao"
+							onAction="ExecutarAcaoDaRibbon"/>
+					
+				</group>
+
+			</tab>
+			
+		</tabs>
+		
+	</ribbon>
+	
+</customUI>

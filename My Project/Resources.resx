@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,112 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icn_ConfiguracoesAcadêmicas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfiguracoesAcadêmicas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfiguracoesAdministrativas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfiguracoesAdministrativas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfiguracoesDeEventos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfiguracoesDeEventos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfiguracoesdeInfraestrutura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfiguracoesdeInfraestrutura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfiguracoesEducacionais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfiguracoesEducacionais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarAndares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarAndares.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarAreaProfissional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarAreaProfissional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarAtestados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarAtestados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarAutorizacoesParaLecionar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarAutorizacoesParaLecionar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarBlocos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarBlocos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarCodigoDaTurma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarCodigoDaTurma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarDatasEventuais" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarDatasEventuais.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarDocentes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarDocentes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarFeriados" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarFeriados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarHorarisDeAulas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarHorarisDeAulas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarNomeDoCurso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarNomeDoCurso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarRecessos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarRecessos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarSalasDeAula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarSalasDeAula.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarTiposDeUnidadesCurriculares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarTiposDeUnidadesCurriculares.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarTurnoLetivo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarTurnoLetivo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarUnidadeEducacional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarUnidadeEducacional.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ConfigurarUnidadesCurriculares" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ConfigurarUnidadesCurriculares.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_CriarCronogramaComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_CriarCronogramaComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_EditarCronogramaComIA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_EditarCronogramaComIA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_EditarCronogramaManualmente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_EditarCronogramaManualmente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ExportarEmPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ExportarEmPDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_ExportarEmXLSX" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_ExportarEmXLSX.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_FinalizarSessao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_FinalizarSessao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_IconePadrao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_IconePadrao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_IniciarSessao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_IniciarSessao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_IrParaEditarCronograma" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_IrParaEditarCronograma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_VisualizarCalendarioAcademico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_VisualizarCalendarioAcademico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_VisualizarErros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_VisualizarErros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icn_VoltarParaMenuInicial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icn_VoltarParaMenuInicial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

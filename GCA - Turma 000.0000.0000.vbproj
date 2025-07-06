@@ -15,6 +15,7 @@
     <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ResolveComReferenceSilent>true</ResolveComReferenceSilent>
     <ProjectGuid>{F181681C-CE52-41D4-9C1B-A6D91534522A}</ProjectGuid>
+    <SolutionID>4fc45fbe-8cee-484d-9a69-3f656765cc43</SolutionID>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
@@ -183,7 +184,11 @@
     <Compile Include="GCA_PL_MENU.vb">
       <DependentUpon>GCA - Turma 000.0000.0000.xlsm</DependentUpon>
     </Compile>
+    <Compile Include="Md_ExcelHelper.vb" />
+    <Compile Include="Md_FuncoesGlobais.vb" />
+    <Compile Include="Md_VariaveisGlobais.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Rbbn_GCA.vb" />
     <Compile Include="ThisWorkbook.Designer.vb">
       <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
     </Compile>
@@ -202,6 +207,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="GCA - Turma 000.0000.0000.xlsm" />
+    <None Include="GCA - Turma 000.0000.0000_TemporaryKey.pfx" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -237,6 +243,111 @@
       <DependentUpon>GCA_PL_CONFIGURACOES.vb</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Rbbn_GCA.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_IniciarSessao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_FinalizarSessao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfiguracoesDeEventos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfiguracoesEducacionais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfiguracoesAcadêmicas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfiguracoesdeInfraestrutura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfiguracoesAdministrativas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_VoltarParaMenuInicial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_IrParaEditarCronograma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarBlocos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarAndares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarSalasDeAula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarTiposDeUnidadesCurriculares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarTurnoLetivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarHorarisDeAulas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarAtestados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarAutorizacoesParaLecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarDocentes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarAreaProfissional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarCodigoDaTurma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarUnidadesCurriculares.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarNomeDoCurso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarDatasEventuais.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarFeriados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarRecessos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ExportarEmXLSX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ExportarEmPDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_VisualizarCalendarioAcademico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_VisualizarErros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_EditarCronogramaComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_EditarCronogramaManualmente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_CriarCronogramaComIA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_ConfigurarUnidadeEducacional.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_IconePadrao.png" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -252,6 +363,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GCA - Turma 000.0000.0000_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ACF937C0903A0C3B8903C052F31CFE58E8A20A56</ManifestCertificateThumbprint>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
